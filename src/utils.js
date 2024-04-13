@@ -1,0 +1,1 @@
+export const steps = [ 'Confirm your details', 'Consent'];
