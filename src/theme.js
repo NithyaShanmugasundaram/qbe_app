@@ -1,13 +1,12 @@
-import * as React from 'react';
 import { createTheme} from '@mui/material/styles';
 
 const qbeTheme = createTheme({
   palette: {
     primary:{
-      main: '#191970',
+      main: '#1D2951',
     },
     secondary:{
-    main:"#191970"
+      main: '#1D2951',
     },
     green:{
       main:"#32CD32"
@@ -17,7 +16,10 @@ const qbeTheme = createTheme({
       light:"#F5F5F5"
     },
     blue:{
-      main:"#2196f3"
+      main:"#1976d2"
+    },
+    error:{
+      main:"#c62828"
     }
       
     

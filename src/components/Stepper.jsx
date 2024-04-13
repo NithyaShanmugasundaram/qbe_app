@@ -17,7 +17,9 @@ const StepContainer = styled(Step)(({ theme }) => ({
   },
   '& .MuiStepLabel-root .Mui-disabled': {
     color: theme.palette.white.main, // circle color (ACTIVE)
-    fontWeight:'medium'
+    fontWeight:'medium',
+    border:"1px solid white",
+    borderRadius:"50%"
   },
   '& .MuiStepLabel-label.Mui-active.MuiStepLabel-alternativeLabel':
     {
@@ -25,7 +27,9 @@ const StepContainer = styled(Step)(({ theme }) => ({
     },
     '& .MuiStepLabel-label.Mui-disabled.MuiStepLabel-alternativeLabel':
     {
-      mt:'0px' // Just text label (ACTIVE)
+      mt:'0px', // Just text label (ACTIVE)
+      border:"1px solid transparent",
+      
     },
   '& .MuiStepLabel-root .Mui-active .MuiStepIcon-text': {
     fill: theme.palette.white.main, // circle's number (ACTIVE)
@@ -51,7 +55,7 @@ export default function StepperComponent() {
   };
 
   return (
-    <Box sx={{ width: '80%' ,mx:'auto',}} >
+    <Box sx={{ width: '50%' ,mx:'auto',}} >
       <Stepper  alternativeLabel  activeStep={activeStep}>
         {steps.map((label, index) => (
           <StepContainer

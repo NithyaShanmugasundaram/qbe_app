@@ -22,7 +22,7 @@ export default function Content() {
       <Grid item xs={12} md={8}>
       <Item  elevation={3}>
       <Stack spacing={2} justifyContent="center" alignItems="center">     
-          <TypographtComponent variant="h5" label="One more thing"  color="secondary.main" fontWeight="bold"/>
+          <TypographtComponent variant="h6" label="One more thing"  color="secondary.main" fontWeight="bold"/>
           <TypographtComponent variant="h6" fontWeight="medium" label="What is your vehicle registration number or garaging postcode?" color="secondary.main"  />
          <TabComponent/>
         </Stack></Item>

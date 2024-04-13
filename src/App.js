@@ -9,13 +9,14 @@ import MobileHeader from './components/MobileHeader'
 
 export default function App() {
   const [registrationNumber, setRegistrationNumber] = useState("");
-  const [postNumber, setPostNumber] = useState("");
+  const [postCodeNumber, setPostCodeNumber]=useState("");
+  const [postCodeErrorNumber, setPostCodeErrorNumber] = useState(false);
   const [registrationNumberError, setRegistrationNumberError] = useState(false);
   const [value, setValue] = React.useState(0);
   const [activeStep, setActiveStep] = React.useState(0);
   const [completed, setCompleted] = React.useState({});
   return (
-    <qbeContext.Provider value={{ completed, setCompleted, activeStep, setActiveStep, value, setValue, registrationNumber, setRegistrationNumber ,postNumber, setPostNumber,registrationNumberError, setRegistrationNumberError}}>
+    <qbeContext.Provider value={{ postCodeErrorNumber, setPostCodeErrorNumber,completed, setCompleted, activeStep, setActiveStep, value, setValue, registrationNumber, setRegistrationNumber ,postCodeNumber, setPostCodeNumber,registrationNumberError, setRegistrationNumberError}}>
     <React.Fragment>
       <CssBaseline />
       <Container maxWidth="false" disableGutters>

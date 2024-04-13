@@ -6,6 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import AdbIcon from "@mui/icons-material/Adb";
 import { Stack, Box } from "@mui/material";
 import IconButtonComponent from "./Iconbutton";
+import image from './../assets/logo192.png';
 const FirstStepContainer = styled(Box)(({ theme }) => ({
   borderBottom: "2px solid green",
   color: theme.palette.green.main,
@@ -41,16 +42,13 @@ export default function MobileHeader() {
       alignItems="center"
     >
       <Grid item xs={10}>
-        <Stack direction="row" justifyContent="center" alignItems="center">
-          <IconButtonComponent
-            ariaLabel="close_icon"
-            icon={<AdbIcon fontSize="large" />}
-          />
+        <Stack spacing={1} direction="row" justifyContent="center" alignItems="center">
+        <img src={image} height={30} width={30} alt="qbe_logo"/>
           <TypographtComponent
             variant="h4"
             label="QBE"
-            component="a"
             color="white.main"
+            fontWeight="bold"
           />
         </Stack>
       </Grid>

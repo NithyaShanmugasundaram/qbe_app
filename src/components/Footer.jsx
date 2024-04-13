@@ -1,14 +1,15 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import { Stack, Box ,Grid,Typography} from "@mui/material";
+import { Stack, Grid,Typography} from "@mui/material";
 
 const GridContainer = styled(Grid)(({ theme }) => ({
   backgroundColor: theme.palette.white.light,
-  padding: "20px 40px",
+  padding: "10px 40px",
   bottom:0,
   color:theme.palette.primary.main,
   [theme.breakpoints.up("sm")]: {
     position: "absolute",
+    bottom:0
   },
 }));
 
@@ -25,7 +26,7 @@ export default function Footer() {
             sx={{textDecoration:'underline'}}           
             variant="caption"
             component="a"
-            color="primary.main"
+            color="blue.main"
           >Terms and Conditions</Typography>
         </Stack>
       </Grid>
