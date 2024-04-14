@@ -8,7 +8,7 @@ const Item = styled(Paper)(({ theme }) => ({
   padding: theme.spacing(2),
   textAlign: 'center',
   [theme.breakpoints.down("md")]: {
-    padding: theme.spacing(2)
+    padding: theme.spacing(2),
   },
 }));
 
@@ -18,7 +18,7 @@ export default function Content() {
       spacing={2}
       direction="row"
       justifyContent="center"
-      alignItems="center">
+      alignItems="center" >
       <Grid item xs={12} md={8}>
       <Item  elevation={3}>
       <Stack spacing={2} justifyContent="center" alignItems="center">     

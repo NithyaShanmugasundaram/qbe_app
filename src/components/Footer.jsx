@@ -5,11 +5,12 @@ import { Stack, Grid,Typography} from "@mui/material";
 const GridContainer = styled(Grid)(({ theme }) => ({
   backgroundColor: theme.palette.white.light,
   padding: "10px 40px",
+  position: "absolute",
   bottom:0,
   color:theme.palette.primary.main,
-  [theme.breakpoints.up("sm")]: {
+  [theme.breakpoints.down("sm")]: {
     position: "absolute",
-    bottom:0
+    bottom:0,
   },
 }));
 

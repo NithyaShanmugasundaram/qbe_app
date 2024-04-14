@@ -8,6 +8,7 @@ import { useContext } from 'react';
 import { qbeContext } from './../context';
 import ButtonComponent from './Button';
 import WarningIcon from "@mui/icons-material/Warning";
+import { validateNumber } from '../utils';
 
 const StyledTextField = styled(TextField)(({ theme }) => ({
   "& .MuiFilledInput-root": {
@@ -99,7 +100,7 @@ function a11yProps(index) {
     'aria-controls': `simple-tabpanel-${index}`,
   };
 }
-const ALPHA_NUMERIC_DASH_REGEX = /^(0|[1-9]\d*)$/;
+
 export default function TabComponent() {
   
   const {
@@ -120,20 +121,24 @@ export default function TabComponent() {
       setRegistrationNumber(value)
       setPostCodeErrorNumber(false)
       setPostCodeNumber("")
-      if (value !== "" && ALPHA_NUMERIC_DASH_REGEX.test(value)) {
-        setRegistrationNumberError(false);  
-      } else {
-        setRegistrationNumberError(true);  
-      }
+   
+      const result=validateNumber(value)
+      console.log(result)
+      if(result){
+        setRegistrationNumberError(false);
+      }else {
+         setRegistrationNumberError(true);  
+       }
     } else if (name == "postCodeNumber") {
       setPostCodeNumber(value)
       setRegistrationNumberError(false)
       setRegistrationNumber("") 
-      if (value !== "" && ALPHA_NUMERIC_DASH_REGEX.test(value)) {
-        setPostCodeErrorNumber(false);   
-      } else {
-        setPostCodeErrorNumber(true);  
-      }
+      const result=validateNumber(value)
+      if(result){
+        setPostCodeErrorNumber(false);
+      }else {
+         setPostCodeErrorNumber(true);  
+       }
     }
    
   };
@@ -198,4 +203,3 @@ export default function TabComponent() {
       </>
   );
 }
-
