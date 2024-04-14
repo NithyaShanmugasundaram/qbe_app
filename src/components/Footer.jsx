@@ -3,15 +3,11 @@ import { styled } from "@mui/material/styles";
 import { Stack, Grid,Typography} from "@mui/material";
 
 const GridContainer = styled(Grid)(({ theme }) => ({
-  backgroundColor: theme.palette.white.light,
+  backgroundColor: theme.palette.white.main,
   padding: "10px 40px",
-  position: "absolute",
+  position: "relative",
   bottom:0,
   color:theme.palette.primary.main,
-  [theme.breakpoints.down("sm")]: {
-    position: "absolute",
-    bottom:0,
-  },
 }));
 
 export default function Footer() {
